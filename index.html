@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0"/>
+    <meta charset="UTF-8">
+    <title>经典扫雷</title>
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/malert.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/malert.css" />
+
+    <!--//符号字体-->
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.8.1/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+
+<div class="container">
+    <div id="dashboard">
+
+        剩余地雷：
+        <input type="text" id="mineleft" value="0" readonly="readonly" size="3">
+        游戏计时：
+        <input type="text" id="timer" readonly="readonly" size="6" value="00:00">
+    </div>
+    <div class="mine_field">
+        <div class="blk">
+            <i class="fas fa-bomb"></i>
+            <i class="far fa-laugh"></i>
+            <i class="fas fa-flag"></i>
+            <span></span>
+        </div>
+        <div class="blk bomb">
+            <i class="fas fa-bomb"></i>
+            <i class="far fa-laugh"></i>
+            <i class="fas fa-flag"></i>
+            <span></span>
+        </div>
+        <div class="blk flag">
+            <i class="fas fa-bomb"></i>
+            <i class="far fa-laugh"></i>
+            <i class="fas fa-flag"></i>
+            <span></span>
+        </div>
+        <div class="blk smile">
+            <i class="fas fa-bomb"></i>
+            <i class="far fa-laugh"></i>
+            <i class="fas fa-flag"></i>
+            <span></span>
+        </div>
+        <div class="blk opened">
+            <i class="fas fa-bomb"></i>
+            <i class="far fa-laugh"></i>
+            <i class="fas fa-flag"></i>
+            <span>5</span>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 10px 0;">
+        <p>
+            <button id="btn_newgame1" onclick="initGame(6,6,6);">新游戏(简单)</button>
+            <button id="btn_newgame2" onclick="initGame(10,10,20);">新游戏(中级)</button>
+            <button id="btn_newgame3" onclick="initGame(15,25,75);">新游戏(高级)</button>
+        </p>
+        <p>
+            左键翻开格子，右键标记为地雷，中键关联翻开周边格子<br/>
+            <span style="color:transparent; ">* 细心的你可能已经发现了，作弊方式是 Shift! </span>
+        </p>
+        <p id="hint" style="color: red;font-size: 3rem;"></p>
+    </div>
+</div>
+
+<script src="js/funs.js"></script>
+</body>
+</html>
